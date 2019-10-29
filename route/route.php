@@ -70,6 +70,7 @@ Route::group('', function () {
         Route::post('file','api/cms.File/postFile');
     });
     Route::group('v1', function () {
+        //图书接口
         Route::group('book',function (){
             // 查询所有图书
             Route::get('', 'api/v1.Book/getBooks');
@@ -83,6 +84,29 @@ Route::group('', function () {
             Route::put(':bid', 'api/v1.Book/update');
             // 删除图书
             Route::delete(':bid', 'api/v1.Book/delete');
+        });
+
+        Route::group('banner',function (){
+            //查询所有轮播图
+            Route::get('','api/v1.Banner/getBanners');
+            //新增
+            Route::post('','api/v1.Banner/addBanner');
+            //删除
+            Route::delete('','api/v1.Banner/delBanner');
+            //编辑轮播图主体信息
+            Route::patch(':id','api/v1.Banner/editBannerInfo');
+            //新增轮播图元素
+            Route::post('item','api/v1.Banner/addBannerItem');
+            //编辑轮播图元素
+            Route::put('item','api/v1.Banner/editBannerItem');
+            //删除轮播图元素
+            Route::delete('item','api/v1.Banner/delBannerItem');
+        });
+
+        Route::group('theme',function (){
+            //查询所有精选专题
+            Route::get('','api/v1.Theme/getSimpleList');
+            Route::get(':id','api/v1.Theme/getThemeById');
         });
 
     });
