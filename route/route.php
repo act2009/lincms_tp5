@@ -107,6 +107,7 @@ Route::group('', function () {
             //查询所有精选专题
             Route::get('','api/v1.Theme/getSimpleList');
             Route::get(':id','api/v1.Theme/getThemeById');
+            Route::post('','api/v1.Theme/addTheme');
         });
 
     });

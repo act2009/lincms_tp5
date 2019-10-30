@@ -57,5 +57,20 @@ class Theme
     }
 
 
+    public function delTheme()
+    {
+        $ids=Request::delete('ids');
+
+
+
+
+        return writeJson(9999,[],'删除精选主题成功',70003);
+
+    }
+
+
+
+
+
 
 }
