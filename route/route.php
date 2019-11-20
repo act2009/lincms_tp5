@@ -108,6 +108,24 @@ Route::group('', function () {
             Route::get('','api/v1.Theme/getSimpleList');
             Route::get(':id','api/v1.Theme/getThemeById');
             Route::post('','api/v1.Theme/addTheme');
+            Route::delete('','api/v1.Theme/delTheme');
+            //编辑专题
+            Route::patch(':id','api/v1.Theme/updateThemeInfo');
+            // 移除精选主题关联商品
+            Route::delete('product/:id','api/v1.Theme/removeThemeProduct');
+            // 新增精选主题关联商品
+            Route::post('product/:id','api/v1.Theme/addThemeProduct');
+        });
+
+        Route::group('category',function (){
+            //查询所有分类
+            Route::get('','api/v1.Category/getAllCategory');
+            Route::post('','api/v1.Category/addCategory');
+
+            // 编辑商品分类
+            Route::put(':id','api/v1.Category/updateCategory');
+
+            Route::delete('','api/v1.Category/delCategory');
         });
 
     });

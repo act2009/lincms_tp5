@@ -43,7 +43,7 @@ class Theme extends BaseModel
      * @param $ids
      * @return bool
      */
-    public function delTheme($ids){
+    public static function delTheme($ids){
         Db::startTrans();
         try {
             //软删除传来的theme id

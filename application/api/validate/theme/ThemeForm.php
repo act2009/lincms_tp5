@@ -24,4 +24,12 @@ class ThemeForm extends BaseValidate
 
     ];
 
+     public function sceneEdit()
+     {
+         return $this
+             ->remove('description', 'require')
+             ->remove('topic_img_id', 'require')
+             ->remove('head_img_id', 'require');
+
+     }
 }
