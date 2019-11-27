@@ -35,7 +35,8 @@ class Theme extends BaseModel
      * */
     public function products()
     {
-        return $this->belongsToMany('Product','theme_product','product_id','theme_id');
+        return $this->belongsToMany('Product','theme_product','product_id','theme_id')
+            ->where('status','=',1);
 
     }
 

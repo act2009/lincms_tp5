@@ -2,17 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: Administrator
- * Date: 2019/10/30
- * Time: 15:56
+ * Date: 2019/11/22
+ * Time: 16:30
  */
 
 namespace app\api\model;
 
 
-use think\Model;
-
-class ThemeProduct extends BaseModel
+class ProductProperty extends BaseModel
 {
-
 
 }
